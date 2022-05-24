@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		*{
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+		.container{
+			display: grid;
+			grid-template-columns: 100px 100px auto 100px;
+		}
+		/*Variante a: ohne auto-placement algorithm*/
+		/*nichts*/
+
+		/*Variante b: auto-placement algorithm*/
+
+		.container-item-1
+		{
+			grid-column: 1/2;
+		}
+
+		.container-item-2
+		{
+			grid-column: 2/3;
+		}
+
+		.container-item-3
+		{
+			grid-column: 4/5;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		<input type="submit"/>
+		<input type="submit"/>
+		<div></div>
+		<input type="submit"/>
+	</div>
+
+	<div class="container">
+		<input type="submit" class="container-item-1"/>
+		<input type="submit" class="container-item-2"/>
+		<input type="submit" class="container-item-3"/>
+	</div>
+</body>
+</html>
